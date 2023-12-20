@@ -12,6 +12,7 @@ GTSAM_TEST_FILES = [
     "gtsam/basis/tests/**",
     "gtsam/discrete/tests/**",
     "gtsam/geometry/tests/**",
+    "gtsam/hybrid/tests/**",
     "gtsam/inference/tests/**",
     "gtsam/linear/tests/**",
     "gtsam/navigation/tests/**",
@@ -34,6 +35,7 @@ cc_library(
             "gtsam/basis/**/*.cpp",
             "gtsam/discrete/**/*.cpp",
             "gtsam/geometry/**/*.cpp",
+            "gtsam/hybrid/**/*.cpp",
             "gtsam/inference/**/*.cpp",
             "gtsam/linear/**/*.cpp",
             "gtsam/navigation/**/*.cpp",
@@ -57,6 +59,7 @@ cc_library(
             "gtsam/basis/*.h",
             "gtsam/discrete/*.h",
             "gtsam/geometry/*.h",
+            "gtsam/hybrid/**/*.h",
             "gtsam/inference/**/*.h",
             "gtsam/linear/**/*.h",
             "gtsam/navigation/*.h",
@@ -121,7 +124,7 @@ cc_library(
         ],
         exclude = [
             "gtsam_unstable/slam/serialization.cpp",
-            "gtsam_unstable/discrete/examples/**/*.cpp"
+            "gtsam_unstable/discrete/examples/**/*.cpp",
         ] + GTSAM_UNSTABLE_TEST_FILES,
     ),
     hdrs = glob(
