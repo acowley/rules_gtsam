@@ -34,7 +34,7 @@ def _gen_gtsam_config_impl(ctx):
             ("GTSAM_ROT3_EXPMAP", True),
             ("GTSAM_USE_TBB", False),  # TODO(aharmat): Figure out best way to use TBB
             ("TBB_GREATER_EQUAL_2020", False),
-            ("GTSAM_USE_SYSTEM_EIGEN", False),
+            ("GTSAM_USE_SYSTEM_EIGEN", True),
             ("GTSAM_USE_EIGEN_MKL_OPENMP", False),  # Put this first so substituations doesn't mess up with next line
             ("GTSAM_USE_EIGEN_MKL", False),
             ("EIGEN_USE_MKL_ALL", False),
